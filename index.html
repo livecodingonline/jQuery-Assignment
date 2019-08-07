@@ -1,49 +1,182 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="styles.css" rel="stylesheet" />
-    <title>LiveCoding jQuery Assignment</title>
-  </head>
-  <body>
-  	<div id="wrapper" >
-	    <header>
-	    	<div id="page-banner">
-	    		<h1 class="title">LiveCoding Topics</h1>
-          <p>Topics for coders</p>
-          <form id="search-topics">
-            <input type="text" placeholder="Search topics..." />
-          </form>
-	    	</div>
-	    </header>
-	    <div id="topic-list">
-	    	<h2 class="title">Topics to Cover</h2>
-	    	<ul>
-	    		<li>
-	    			<span class="name">JavaScript Essentials 1</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">JavaScript Essentials 2</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">jQuery Essentials</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">React Essentials</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    	</ul>
-	    </div>
-	    <form id="add-topic">
-			<input type="checkbox" id="hide" />
-			<label for="hide"> Hide all topics </label>
-	    	<input type="text" placeholder="Add a topic..." />
-	    	<button>Add</button>
-	    </form>
-    </div>
+
+<head>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>LiveCoding jQuery Assignment</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="tab-panels">
+			<ul class="tabs">
+				<li rel="tab1" id="tab-1" class="active">Galatasaray</li>
+				<li rel="tab2" id="tab-2">Fenerbahce</li>
+				<li rel="tab3" id="tab-3">Besiktas</li>
+				<li rel="tab4" id="tab-4">Trabzonspor</li>
+			</ul>
+			<div id="wrapper">
+				<header>
+					<div id="page-banner">
+						<h1 class="title">Squad of Galatasaray</h1>
+						<p>Player Information</p>
+
+						<input id="search-player" type="text" placeholder="Search player from Galatasaray"  />
+
+					</div>
+				</header>
+
+				<div id="tab1" class="panel active">
+					<div id="topic-list-gs">
+						<h2 class="title">Galatasaray</h2>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Name</th>
+									<th scope="col">Position</th>
+									<th scope="col">Age</th>
+									<th scope="col">Market Value</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">1</td>
+									<td id='players' class="name">Muslera</td>
+									<td class="position">Goalkeeper</td>
+									<td class="age">32</td>
+									<td class="value">15 000 000</td>
+									<td class="delete">delete</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="tab2" class="panel">
+					<div id="topic-list-fb">
+						<h2 class="title">Fenerbahce</h2>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Name</th>
+									<th scope="col">Position</th>
+									<th scope="col">Age</th>
+									<th scope="col">Market Value</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">1</td>
+									<td id='players' class="name">Emre Belozoglu</td>
+									<td class="position">Midfield</td>
+									<td class="age">37</td>
+									<td class="value">5 000 000</td>
+									<td class="delete">delete</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="tab3" class="panel">
+					<div id="topic-list-bjk">
+						<h2 class="title">Besiktas</h2>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Name</th>
+									<th scope="col">Position</th>
+									<th scope="col">Age</th>
+									<th scope="col">Market Value</th>
+									<th scope="col"></th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">1</td>
+									<td id='players' class="name">Burak Yilmaz</td>
+									<td class="position">Forward</td>
+									<td class="age">34</td>
+									<td class="value">10 000 000</td>
+									<td class="delete">delete</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="tab4" class="panel">
+					<div id="topic-list-ts">
+						<h2 class="title">Trabzonspor</h2>
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Name</th>
+									<th scope="col">Position</th>
+									<th scope="col">Age</th>
+									<th scope="col">Market Value</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">1</td>
+									<td id='players' class="name">José Sosa</td>
+									<td class="position">Midfield</td>
+									<td class="age">34</td>
+									<td class="value">7 000 000</td>
+									<td class="delete">delete</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<form id="add-player">
+					<div class="row">
+						<div class="form-group col-md-2">
+							<input type="text" id="team" placeholder="Team" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<input type="text" id="name" placeholder="Name" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<input type="text" id="pos" placeholder="Position" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<input type="text" id="age" placeholder="Age" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<input type="text" id="val" placeholder="Value" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<button type="submit" class="btn btn-primary">Add</button>
+						</div>
+					</div>
+					<input type="checkbox" id="hide" />
+					<label for="hide"> Hide all players </label>
+				</form>
+
+			</div>
+		</div>
+		<footer>
+				Designed by <strong>Zeyd Ustaoglu</strong> | 2019
+			   </footer>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
 	<script src="app.js"></script>
-  </body>
+</body>
+
 </html>
