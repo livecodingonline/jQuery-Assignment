@@ -2,7 +2,9 @@ body{
     font-family: Tahoma;
     color: #444;
     letter-spacing: 1px;
+    background-image: url('/images/stadium.jpg')
 }
+
 
 h1, h2{
     font-weight: normal;
@@ -11,20 +13,28 @@ h1, h2{
 #wrapper{
     width: 90%;
     max-width: 960px;
-    margin: 20px auto;
+    margin: 1px auto;
     border-radius: 6px;
     box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
     box-sizing: border-box;
     padding: 0 0 20px;
     overflow: hidden;
-    border: 1px solid lightgray;
+    /* border: 1px solid rgb(255, 243, 78); */
 }
 
 #page-banner{
-    background: #eee ;
+    background: rgb(255, 243, 78);  
     padding: 10px 0;
-
 }
+#page-banner h1{
+    color: rgb(169, 0, 0);    
+}
+
+#page-banner p{
+    color: rgb(169, 0, 0);  
+}
+
+
 
 #page-banner h1, #page-banner p{
     width: 100%;
@@ -44,46 +54,40 @@ h1, h2{
     color: #444;
 }
 
-#topic-list, #add-topic, #tabbed-content{
-    margin: 30px;
-}
 
-#topic-list ul, #tabbed-content ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-#topic-list li{
-    padding: 20px;
-    border-left: 5px solid #ddd;
-    margin: 20px 10px;
-}
-
-#topic-list li:hover{
-    border-color: #9361bf;
+tbody tr:hover{
+    background-color: #c7c7c7;
 }
 
 .delete{
     float: right;
-    background: #9361bf;
-    padding: 6px;
+    background: #d30000;
+    padding: 4px;
     border-radius: 4px;
     cursor: pointer;
     color: white;
+    padding: 8px 15px 8px 15px;
+    margin: 5px 5px 5px 0;
 }
 
 .delete:hover{
     background: #333;
 }
 
-#add-topic{
-    width: 400px;
-    margin: 0 auto;
+#add-player{
+    width: 100%;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 6px;
+    padding: 22px;
 }
-
-#add-topic input{
+#add-player button:hover{
+    background: #333;
+    border: 1px solid #333;
+}
+#add-player form div input{
     display: block;
-    margin: 19px 0;
+    margin: 20px 0;
     padding: 10px;
     border: 1px solid #ccc;
     font-size: 16px;
@@ -91,35 +95,103 @@ h1, h2{
     box-sizing: border-box;
     width: 300px;
     float: left;
+    
 }
 
-#add-topic button{
-    border: 1px solid #9361bf;
-    background: #9361bf;
-    padding: 10px 20px;
+#add-player button{
+    border: 1px solid #d30000;
+    background: #d30000;
+    padding:6px 20px;
     font-size: 16px;
     display: inline-block;
-    margin: 0;
-    border-radius: 0 4px 4px 0;
+    
+    border-radius: 4px;
     cursor: pointer;
     width: 100px;
-    float: left;
-    margin: 19px 0;
+    
+   
     border-left: 0;
     color: white;
+    width: inherit
 }
 
-#add-topic:after{
+#add-player:after{
     content: '';
     display: block;
     clear: both;
 }
 
-#add-topic #hide{
+
+.red{
+    color: red;
+}
+
+
+#add-player #hide {
     width: 30px;
 }
-#add-topic label{
+
+#add-player label {
     line-height: 52px;
 }
 
 
+
+/* Tabs Styles */
+
+.tab-panels ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 90%;
+    max-width: 960px;    
+    border-radius: 6px;
+    margin: 20px auto 0 auto;
+    box-sizing: border-box;    
+    overflow: hidden;
+}
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;    
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;  
+    font-weight: 200;
+    cursor: pointer;
+    width: 24%;
+    text-align: center;
+}
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #666;
+   
+}
+
+ .tab-panels ul li{
+    background:#eeeeee;
+    color:#343a40;
+    font-weight: normal
+    
+}
+
+.tab-panels .panel {
+    display:none;
+    background: #eeeeee;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-panels .panel.active {
+    display:block;
+}
+
+footer{
+    text-align: center;
+    margin: 50px auto auto auto ;
+    width: 50%;
+    
+    background-color: white;
+    border-radius: 6px;
+    padding: 2px
+    
+}
